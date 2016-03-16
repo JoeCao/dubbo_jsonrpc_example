@@ -1,5 +1,5 @@
 zookeeper:
-  image: jplock/zookeeper:3.4.8
+  image: jplock/zookeeper:3.4.5
   ports:
    - "2181:2181"
   net: "host"
