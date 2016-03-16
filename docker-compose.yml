@@ -1,0 +1,33 @@
+zookeeper:
+  image: jplock/zookeeper:3.4.8
+  ports:
+   - "2181:2181"
+  net: "host"
+
+
+dubboadmin:
+#  image: joecao/tomcat7
+  build: tomcat7
+  ports:
+   - "8080:8080"
+  volumes_from:
+   - dubbowar
+  net: "host"
+
+dubbowar:
+  build: admin
+
+dubboserver:
+#  image: joecao/dubbojsonrpc
+  build: dubbo_server
+  ports:
+   - "10881:10881"
+   - "38081:38081" 
+  net: "host" 
+
+pythonclient:
+  build: dubbo_client_py
+  net: "host"
+
+
+
