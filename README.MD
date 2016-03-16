@@ -12,10 +12,10 @@ Python Dubbo Client Demo
 docker-compose up
 会自动下载镜像和编译本地镜像  
 如果发现网络过慢，可以通过加速服务事先下载  
-**zplock/zookeeper:3.4.5  
+zplock/zookeeper:3.4.5  
 java:8  
 python:2.7  
-ubuntu:14.04  **  
+ubuntu:14.04  
 上述镜像
 
 *注：docker使用了host的组网方式，也就是说所有的容器都是在宿主机上面开启端口，避免的网络的复杂配置问题。*
